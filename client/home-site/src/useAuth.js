@@ -26,6 +26,7 @@ export default function useAuth(code) {
                 setExpiresIn(res.data.expiresIn)
             }).catch(() => window.location = '/');
         }, (expiresIn - 60) * 1000);
+        return () => clearInterval(interval);
     }, [refreshToken, expiresIn]);
     return accessToken;
 }
