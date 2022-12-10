@@ -1,11 +1,27 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Login from './Login'
-import Dashboard from './Dashboard';
-const code = new URLSearchParams(window.location.search).get('code');
+import MusicHome from './MusicHome'
+import Home from './Home.js'
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+
 function App() {
-  if(code) return <Dashboard code={code}/>
-  else return <Login />
+  return (
+    <Router>
+      <div className="App">
+        <ul className="App-header">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/musichome">Login</Link>
+          </li>
+        </ul>
+        <Routes>
+          <Route exact path='/' element={< Home/>}></Route>
+          <Route exact path='/musichome' element={< MusicHome/>}></Route>
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

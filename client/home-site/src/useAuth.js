@@ -13,8 +13,8 @@ export default function useAuth(code) {
             setAccessToken(res.data.accessToken);
             setRefreshToken(res.data.refreshToken);
             setExpiresIn(res.data.expiresIn);
-            window.history.pushState({}, null, '/');
-        }).catch(() => window.location = '/');
+            window.history.pushState({}, null, '/musichome');
+        }).catch(() => window.location = '/musichome');
     }, [code]);
     useEffect(() => {
         if (!refreshToken || !expiresIn) return;
@@ -24,7 +24,7 @@ export default function useAuth(code) {
             }).then(res => {
                 setAccessToken(res.data.accessToken)
                 setExpiresIn(res.data.expiresIn)
-            }).catch(() => window.location = '/');
+            }).catch(() => window.location = '/musichome');
         }, (expiresIn - 60) * 1000);
         return () => clearInterval(interval);
     }, [refreshToken, expiresIn]);
