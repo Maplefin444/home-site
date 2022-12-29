@@ -40,4 +40,7 @@ app.post('/login', (req, res) => {
     }).catch((err) => { res.sendStatus(400); });
 });
 
+app.post('/runescape', (req, res) => {
+});
+
 app.listen(3001);
