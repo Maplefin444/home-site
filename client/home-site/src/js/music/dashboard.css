@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    height: 100%;
+}
+
+.content {
+    flex-grow: 2;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    overflow-y: auto;
+}
+
+.card{
+    display: flex;
+    margin: 2px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.data{
+    display: block;
+    margin-left: 1rem;
+    text-align: left;
+}

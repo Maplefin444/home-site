@@ -2,11 +2,13 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import "./navbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faMusic, faGamepad } from '@fortawesome/free-solid-svg-icons'
+import cat from "./cat.jpg"
 
 export default function Navbar() {
     return (
         <nav className="nav">
             <ul>
+                <img src={cat}/>
                 <CustomLink to="/">
                     <FontAwesomeIcon icon={faHouse} size="2xl" />
                 </CustomLink>
