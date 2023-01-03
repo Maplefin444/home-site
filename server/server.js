@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyparser = require('body-parser');
 const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
+const { constants, hiscores } = require("osrs-api");
 app.use(cors());
 app.use(bodyparser.json());
 
@@ -41,6 +42,12 @@ app.post('/login', (req, res) => {
 });
 
 app.post('/runescape', (req, res) => {
+    hiscores.getPlayer({ name: "Maplefin", type: constants.playerTypes.normal }).then(data => {
+        res.json({
+            hiScore: data
+        })
+    }).catch(console.error);
+
 });
 
 app.listen(3001);

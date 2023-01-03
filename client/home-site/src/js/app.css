@@ -7,8 +7,12 @@ body {
 }
 
 .container {
-  margin: 1rem;
+  width: 100%;
+  margin: 0px;
+  margin-left: 66px;
   text-align: center;
+  max-width: calc(100vw - 66px);
+  overflow-x: hidden;
 }
 
 .site-title {

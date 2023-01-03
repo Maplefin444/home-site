@@ -4,6 +4,7 @@ import Home from './Home.js'
 import RSHome from './runescape/RSHome'
 import Navbar from './reusable_components/Navbar.js'
 import { Routes, Route } from 'react-router-dom';
+import './app.css';
 
 function App() {
   return (
