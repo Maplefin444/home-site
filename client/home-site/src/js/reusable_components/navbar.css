@@ -3,7 +3,7 @@
   left: 0;
   z-index: 1;
   height: 100%;
-  background-color: #333;
+  background-color: #222;
   color: white;
   display: inline-block;
   justify-content: space-between;
@@ -34,7 +34,7 @@
   text-align: center;
 }
 .nav li {
-  height: 100%;
+  height: fit-content;
   width: auto;
   align-items: center;
   margin: auto;
@@ -44,9 +44,10 @@
   text-decoration: none;
   display: inline-flex;
   width: auto;
-  height: 100%;
+  height: fit-content;
   align-items: center;
-  padding: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .nav li.active {
@@ -55,4 +56,41 @@
 
 .nav li:hover {
   background-color: #777;
+}
+
+.toggle {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
+  align-items: center;
+}
+
+.aligner {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  width: 58px;
+  height: 100%;
+  align-items: center;
+  padding: 0.25rem;
+  justify-content: center;
+  color: white;
+  padding: 0px;
+}
+
+
+.toggle.active {
+  background-color: #555;
+}
+
+.toggle:hover {
+  background-color: #777;
+}
+.spacer{
+  height: 2rem;
+  margin: 0;
+  padding: 0;
 }

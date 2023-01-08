@@ -6,15 +6,32 @@ body {
   margin: 0;
 }
 
+#root{
+  overflow-x:hidden;
+}
+
 .container {
   width: 100%;
   margin: 0px;
-  margin-left: 66px;
+  margin-left: 74px;
   text-align: center;
-  max-width: calc(100vw - 66px);
+  max-width: calc(100vw - 74px);
   overflow-x: hidden;
+  padding: 0px
 }
 
 .site-title {
   font-size: 2rem;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
+  border-color: #333;
 }

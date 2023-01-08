@@ -46,7 +46,7 @@ export default function Dashboard({ code }) {
         return () => (cancel = true)
     }, [search, accessToken])
 
-    return <Container>
+    return <div className='dashboard'>
         <Form.Control type="search" placeholder="Search" value={search} onChange={e =>
             setSearch(e.target.value)
         } />
@@ -57,9 +57,6 @@ export default function Dashboard({ code }) {
                 ))
             }
         </div>
-        <div>
-            bottom
-        </div>
-    </Container>
+    </div>
 
 }
