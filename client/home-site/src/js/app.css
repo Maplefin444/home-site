@@ -26,10 +26,16 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 80px
+  font-size: 80px;
 }
 
+body{
+  min-width: 1300px;
+  min-height: 800px;
+}
 body #root {
+  min-width: 1300px;
+  min-height: 800px;
   width: 100vw;
   height: 100vh;
   background-color: #070707;
