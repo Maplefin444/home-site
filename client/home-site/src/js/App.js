@@ -8,6 +8,7 @@ import Icon from './Icon.js'
 import Weather from './Weather.js'
 
 function App() {
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const [date, setDate] = useState(new Date());
   const [weather, setWeather] = useState();
   useEffect(() => {
@@ -19,8 +20,8 @@ function App() {
     }
   }, []);
   const time = date.toLocaleTimeString('en', { hour: 'numeric', hour12: true, minute: 'numeric' });
-  const hours = date.getHours() + 1;
-
+  const month = monthNames[date.getMonth()];
+  const day = date.getDate();
   const apiLink = 'https://api.openweathermap.org/data/2.5/weather?lat=43.6532&lon=-79.3832&appid=d54a2e1f91d2f1e44d6890129a09c4db&units=metric';
   useEffect(() => {
     fetch(apiLink).then((res) => {
@@ -28,7 +29,7 @@ function App() {
     }).then((data) => {
       setWeather(data);
     });
-  },[]);
+  }, []);
 
   return (
     <div className='container'>
@@ -37,11 +38,11 @@ function App() {
           {time}
         </div>
         <div className='date'>
-          Feb 11
+          {month + " " + day}
         </div>
       </div>
 
-      <Weather data={weather}/>
+      <Weather data={weather} />
 
       <div className='icon'>
         <Icon data={weather} />
