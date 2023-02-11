@@ -9,4 +9,6 @@ This was created with React.js, and has a couple of features:
 4. Changing icons based on weather
 ```
 
+(still waiting on domain + server)
+
 Side graphics are borrowed from GMK Colorchrome's Stencil deskmat.
